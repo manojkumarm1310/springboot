@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1715413425253_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1715413425261_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1723184306186_3" label="sample-springboot-project" name="sample-springboot-project">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sample-springboot-project" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1723446218715_4" label="sample-mvc-project" name="sample-mvc-project">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sample-mvc-project" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1723788057289_5" label="spring-boot-jpa-app" name="spring-boot-jpa-app">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-boot-jpa-app" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724041933938_6" label="user-rest-app" name="user-rest-app">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/user-rest-app" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724049377395_7" label="springboot-jpa-crud-project" name="springboot-jpa-crud-project">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-jpa-crud-project" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724144024413_8" label="spring-security-jwt-app" name="spring-security-jwt-app">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-security-jwt-app" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724153191118_9" label="spring-security-jwt-example1" name="spring-security-jwt-example1">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-security-jwt-example1" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724154593852_10" label="spring-security-jwt-example2" name="spring-security-jwt-example2">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-security-jwt-example2" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724219501434_11" label="SecurityLayer" name="SecurityLayer">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Spring-Security-6-JWT-main" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724259217965_12" label="spring-security-practice-app" name="spring-security-practice-app"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724305178515_13" label="registry-service" name="registry-service"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724389148025_14" label="producer-service" name="producer-service"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724389175981_15" label="gateway-service" name="gateway-service"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724389197312_16" label="consumer-service" name="consumer-service"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724389222195_17" label="authorization-service" name="authorization-service"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724435010966_18" label="spring-security-ms-jpa-app" name="spring-security-ms-jpa-app">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-security-ms-jpa-app" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724511726815_19" label="Part29-SpringSecEx" name="Part29-SpringSecEx">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Part38-Spring Security 6 Validating JWT Token" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724581056596_20" label="question-service" name="question-service">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/question-service" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724771570971_21" label="mvc_jpa_practice" name="mvc_jpa_practice">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mvc_jpa_practice" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724847867747_22" label="springboot-jpa-rest-blog-app" name="springboot-jpa-rest-blog-app">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-jpa-rest-blog-app" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724856681138_23" label="blog-engine-spring-data-jpa" name="blog-engine-spring-data-jpa"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724863832043_24" label="springboot-blog-jpa-rest" name="springboot-blog-jpa-rest">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-blog-jpa-rest" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724867338971_25" label="jpa-blog" name="jpa-blog"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1724873388320_26" label="springboot-jpa-rest-blog-app1" name="springboot-jpa-rest-blog-app1"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1725863186048_27" label="trip-management-app" name="trip-management-app">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/trip-management-app" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1726040192663_28" label="milestone-4-24NAG2088_06" name="milestone-4-24NAG2088_06">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/milestone-4-24NAG2088_06" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1726236044801_29" label="spring-security" name="spring-security">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-security" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1726237468100_30" label="trip-management-system-capstone" name="trip-management-system-capstone">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/trip-management-system-capstone" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1726237723575_31" label="usersmanagementsystem" name="usersmanagementsystem">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/usersmanagementsystem" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1726575068197_32" label="24NAG2088_06_manojkumar_m_final_milestone" name="24NAG2088_06_manojkumar_m_final_milestone">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/24NAG2088_06_manojkumar_m_final_milestone" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1715413425825_2" label="Window Working Set" name="Aggregate for window 1715413425824"/>
+</workingSetManager>

@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+C:\Users\manov\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1852261486.index
+\JSTLIntro\src\main\java

@@ -1,0 +1,1116 @@
+09:14:16.157 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:14:16.173 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:14:24.372 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/bus/getAllBus
+09:14:24.373 [http-nio-8081-exec-4] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+09:14:24.374 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
+09:14:24.374 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(com.wipro.entity.Users(562702000929500))] with identifierForTableGroup [com.wipro.entity.Users] for NavigablePath [com.wipro.entity.Users] 
+09:14:24.375 [http-nio-8081-exec-4] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@777df9cc
+09:14:24.375 [http-nio-8081-exec-4] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.wipro.entity.Users(562702000929500).email) 
+09:14:24.375 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [com.wipro.entity.Users(562702000929500)]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).Gender]
+ |  +-DelayedCollectionFetch [com.wipro.entity.Users(562702000929500).bookings]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).dateOfBirth]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).email]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).mobile]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).name]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).password]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).role]
+ |  +-DelayedCollectionFetch [com.wipro.entity.Users(562702000929500).tripFeedback]
+ |  \-BasicFetch [com.wipro.entity.Users(562702000929500).userLocation]
+
+09:14:24.375 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (u1 : com.wipro.entity.Users(562702000929500)) {
+          primaryTableReference : users as u1_0
+        }
+      }
+    }
+
+09:14:24.375 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+09:14:24.376 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Initializer list:
+	  com.wipro.entity.Users(562702000929500).bookings -> DelayedCollectionInitializer(com.wipro.entity.Users(562702000929500).bookings)@2061871781 (PluralAttribute(com.wipro.entity.Users.bookings))
+	  com.wipro.entity.Users(562702000929500).tripFeedback -> DelayedCollectionInitializer(com.wipro.entity.Users(562702000929500).tripFeedback)@1657708460 (PluralAttribute(com.wipro.entity.Users.tripFeedback))
+	  com.wipro.entity.Users(562702000929500) -> EntityResultInitializer(com.wipro.entity.Users(562702000929500))@186715116 (SingleTableEntityPersister(com.wipro.entity.Users))
+
+09:14:24.376 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.user_id,
+        u1_0.gender,
+        u1_0.date_of_birth,
+        u1_0.email,
+        u1_0.mobile,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.user_location 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+09:14:24.377 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [5702]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.Users(562702000929500)): 5702
+09:14:24.378 [http-nio-8081-exec-4] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (DelayedCollectionInitializer) Current row collection key : com.wipro.entity.Users(562702000929500).bookings#5702
+09:14:24.378 [http-nio-8081-exec-4] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (DelayedCollectionInitializer) Current row collection key : com.wipro.entity.Users(562702000929500).tripFeedback#5702
+09:14:24.378 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.Users(562702000929500)#5702] : 1162931376
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [MALE]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [2024-09-19]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [admin@wipro.com]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [9597924004]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [admin]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [6] - [$2a$12$YV9T43vuvDCWls5RwcS8vedZyZpfXqpfKpNnPwdIuK3IhrioLoI3i]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [7] - [ADMIN]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [8] - [admin]
+09:14:24.378 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.Users(562702000929500)#5702
+09:14:24.378 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@28b11bba
+09:14:24.379 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/bus/getAllBus
+09:14:24.379 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bus/getAllBus", parameters={}
+09:14:24.380 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.wipro.controller.TripBusController#getAllBus()
+09:14:24.380 [http-nio-8081-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+09:14:24.382 [http-nio-8081-exec-4] INFO  com.wipro.aspect.LoggingAspect - Entering method: TripBusController.getAllBus()
+09:14:24.383 [http-nio-8081-exec-4] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1791383408<open>)] for JPA transaction
+09:14:24.383 [http-nio-8081-exec-4] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+09:14:24.383 [http-nio-8081-exec-4] DEBUG o.s.jdbc.datasource.DataSourceUtils - Setting JDBC Connection [HikariProxyConnection@1129243324 wrapping oracle.jdbc.driver.T4CConnection@5bd68074] read-only
+09:14:24.384 [http-nio-8081-exec-4] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+09:14:24.384 [http-nio-8081-exec-4] DEBUG o.h.e.t.internal.TransactionImpl - begin
+09:14:24.384 [http-nio-8081-exec-4] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4630b34f]
+09:14:24.385 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : tb1_0
+09:14:24.386 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(com.wipro.entity.TripBus(569551758148700))] with identifierForTableGroup [com.wipro.entity.TripBus] for NavigablePath [com.wipro.entity.TripBus] 
+09:14:24.387 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [com.wipro.entity.TripBus(569551758148700)]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569551758148700).availableSeat]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569551758148700).availableStatus]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569551758148700).busCapacity]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569551758148700).busNumber]
+ |  \-BasicFetch [com.wipro.entity.TripBus(569551758148700).busType]
+
+09:14:24.389 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (tb1 : com.wipro.entity.TripBus(569551758148700)) {
+          primaryTableReference : trip_bus as tb1_0
+        }
+      }
+    }
+
+09:14:24.391 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+09:14:24.391 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Initializer list:
+	  com.wipro.entity.TripBus(569551758148700) -> EntityResultInitializer(com.wipro.entity.TripBus(569551758148700))@1329777208 (SingleTableEntityPersister(com.wipro.entity.TripBus))
+
+09:14:24.391 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tb1_0.bus_id,
+        tb1_0.available_seat,
+        tb1_0.available_status,
+        tb1_0.bus_capacity,
+        tb1_0.bus_number,
+        tb1_0.bus_type 
+    from
+        trip_bus tb1_0
+09:14:24.392 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1802]
+09:14:24.392 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569551758148700)): 1802
+09:14:24.392 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569551758148700)#1802] : 886832237
+09:14:24.392 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [9]
+09:14:24.392 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:24.392 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [50]
+09:14:24.392 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN63 CX 4392]
+09:14:24.392 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Semi-Luxury]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569551758148700)#1802
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d91f3c4
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1803]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569551758148700)): 1803
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569551758148700)#1803] : 919950632
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [26]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [30]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN63 CX 7894]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Semi-Luxury]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569551758148700)#1803
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d91f3c4
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1804]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569551758148700)): 1804
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569551758148700)#1804] : 909586232
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [54]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [60]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN01 CX 1234]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Volvo]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569551758148700)#1804
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d91f3c4
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1904]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569551758148700)): 1904
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569551758148700)#1904] : 1566868743
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [15]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [AVAILABLE]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [15]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN01 TS 1234]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Electric Bus]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569551758148700)#1904
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d91f3c4
+09:14:24.393 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [2002]
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569551758148700)): 2002
+09:14:24.393 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569551758148700)#2002] : 1057575612
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [20]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [20]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN03 TS 1234]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Luxury]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569551758148700)#2002
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d91f3c4
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1905]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569551758148700)): 1905
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569551758148700)#1905] : 602487904
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [90]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [AVAILABLE]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [90]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN02 TS 1234]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Electric Bus]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569551758148700)#1905
+09:14:24.394 [http-nio-8081-exec-4] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6d91f3c4
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction commit
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.s.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [SessionImpl(1791383408<open>)]
+09:14:24.394 [http-nio-8081-exec-4] DEBUG o.h.e.t.internal.TransactionImpl - committing
+09:14:24.395 [http-nio-8081-exec-4] DEBUG o.s.jdbc.datasource.DataSourceUtils - Resetting read-only flag of JDBC Connection [HikariProxyConnection@1129243324 wrapping oracle.jdbc.driver.T4CConnection@5bd68074]
+09:14:24.395 [http-nio-8081-exec-4] DEBUG o.s.orm.jpa.JpaTransactionManager - Not closing pre-bound JPA EntityManager after transaction
+09:14:24.395 [http-nio-8081-exec-4] INFO  com.wipro.aspect.LoggingAspect - Method TripBusController.getAllBus() returned with value: [TripBus(busId=1802, busNumber=TN63 CX 4392, busType=Semi-Luxury, busCapacity=50, availableStatus=UNAVAILABLE, availableSeat=9), TripBus(busId=1803, busNumber=TN63 CX 7894, busType=Semi-Luxury, busCapacity=30, availableStatus=UNAVAILABLE, availableSeat=26), TripBus(busId=1804, busNumber=TN01 CX 1234, busType=Volvo, busCapacity=60, availableStatus=UNAVAILABLE, availableSeat=54), TripBus(busId=1904, busNumber=TN01 TS 1234, busType=Electric Bus, busCapacity=15, availableStatus=AVAILABLE, availableSeat=15), TripBus(busId=2002, busNumber=TN03 TS 1234, busType=Luxury, busCapacity=20, availableStatus=UNAVAILABLE, availableSeat=20), TripBus(busId=1905, busNumber=TN02 TS 1234, busType=Electric Bus, busCapacity=90, availableStatus=AVAILABLE, availableSeat=90)]
+09:14:24.396 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+09:14:24.398 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[TripBus(busId=1802, busNumber=TN63 CX 4392, busType=Semi-Luxury, busCapacity=50, availableStatus=UN (truncated)...]
+09:14:24.401 [http-nio-8081-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+09:14:24.401 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+09:14:26.289 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/bus/getAllBus
+09:14:26.290 [http-nio-8081-exec-2] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+09:14:26.291 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : u1_0
+09:14:26.291 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(com.wipro.entity.Users(562702000929500))] with identifierForTableGroup [com.wipro.entity.Users] for NavigablePath [com.wipro.entity.Users] 
+09:14:26.292 [http-nio-8081-exec-2] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@6f3a12e4
+09:14:26.292 [http-nio-8081-exec-2] DEBUG o.h.q.s.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.wipro.entity.Users(562702000929500).email) 
+09:14:26.292 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [com.wipro.entity.Users(562702000929500)]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).Gender]
+ |  +-DelayedCollectionFetch [com.wipro.entity.Users(562702000929500).bookings]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).dateOfBirth]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).email]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).mobile]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).name]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).password]
+ |  +-BasicFetch [com.wipro.entity.Users(562702000929500).role]
+ |  +-DelayedCollectionFetch [com.wipro.entity.Users(562702000929500).tripFeedback]
+ |  \-BasicFetch [com.wipro.entity.Users(562702000929500).userLocation]
+
+09:14:26.292 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (u1 : com.wipro.entity.Users(562702000929500)) {
+          primaryTableReference : users as u1_0
+        }
+      }
+    }
+
+09:14:26.292 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+09:14:26.293 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Initializer list:
+	  com.wipro.entity.Users(562702000929500).bookings -> DelayedCollectionInitializer(com.wipro.entity.Users(562702000929500).bookings)@547960157 (PluralAttribute(com.wipro.entity.Users.bookings))
+	  com.wipro.entity.Users(562702000929500).tripFeedback -> DelayedCollectionInitializer(com.wipro.entity.Users(562702000929500).tripFeedback)@524009118 (PluralAttribute(com.wipro.entity.Users.tripFeedback))
+	  com.wipro.entity.Users(562702000929500) -> EntityResultInitializer(com.wipro.entity.Users(562702000929500))@1153751379 (SingleTableEntityPersister(com.wipro.entity.Users))
+
+09:14:26.293 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.user_id,
+        u1_0.gender,
+        u1_0.date_of_birth,
+        u1_0.email,
+        u1_0.mobile,
+        u1_0.name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.user_location 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [5702]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.Users(562702000929500)): 5702
+09:14:26.294 [http-nio-8081-exec-2] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (DelayedCollectionInitializer) Current row collection key : com.wipro.entity.Users(562702000929500).bookings#5702
+09:14:26.294 [http-nio-8081-exec-2] DEBUG o.h.o.r.l.o.h.o.r.loading.collection - (DelayedCollectionInitializer) Current row collection key : com.wipro.entity.Users(562702000929500).tripFeedback#5702
+09:14:26.294 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.Users(562702000929500)#5702] : 386054489
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [MALE]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [2024-09-19]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [admin@wipro.com]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [9597924004]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [admin]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [6] - [$2a$12$YV9T43vuvDCWls5RwcS8vedZyZpfXqpfKpNnPwdIuK3IhrioLoI3i]
+09:14:26.294 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [7] - [ADMIN]
+09:14:26.295 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [8] - [admin]
+09:14:26.295 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.Users(562702000929500)#5702
+09:14:26.295 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@4a737d6b
+09:14:26.296 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/bus/getAllBus
+09:14:26.296 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/bus/getAllBus", parameters={}
+09:14:26.296 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.wipro.controller.TripBusController#getAllBus()
+09:14:26.296 [http-nio-8081-exec-2] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+09:14:26.298 [http-nio-8081-exec-2] INFO  com.wipro.aspect.LoggingAspect - Entering method: TripBusController.getAllBus()
+09:14:26.299 [http-nio-8081-exec-2] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [SessionImpl(1211751693<open>)] for JPA transaction
+09:14:26.299 [http-nio-8081-exec-2] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+09:14:26.300 [http-nio-8081-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Setting JDBC Connection [HikariProxyConnection@1257284381 wrapping oracle.jdbc.driver.T4CConnection@5bd68074] read-only
+09:14:26.301 [http-nio-8081-exec-2] DEBUG o.h.e.t.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+09:14:26.301 [http-nio-8081-exec-2] DEBUG o.h.e.t.internal.TransactionImpl - begin
+09:14:26.302 [http-nio-8081-exec-2] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@24b445ff]
+09:14:26.305 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : tb1_0
+09:14:26.305 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(com.wipro.entity.TripBus(569553676406100))] with identifierForTableGroup [com.wipro.entity.TripBus] for NavigablePath [com.wipro.entity.TripBus] 
+09:14:26.306 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [com.wipro.entity.TripBus(569553676406100)]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569553676406100).availableSeat]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569553676406100).availableStatus]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569553676406100).busCapacity]
+ |  +-BasicFetch [com.wipro.entity.TripBus(569553676406100).busNumber]
+ |  \-BasicFetch [com.wipro.entity.TripBus(569553676406100).busType]
+
+09:14:26.306 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (tb1 : com.wipro.entity.TripBus(569553676406100)) {
+          primaryTableReference : trip_bus as tb1_0
+        }
+      }
+    }
+
+09:14:26.306 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+09:14:26.306 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Initializer list:
+	  com.wipro.entity.TripBus(569553676406100) -> EntityResultInitializer(com.wipro.entity.TripBus(569553676406100))@538330465 (SingleTableEntityPersister(com.wipro.entity.TripBus))
+
+09:14:26.306 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tb1_0.bus_id,
+        tb1_0.available_seat,
+        tb1_0.available_status,
+        tb1_0.bus_capacity,
+        tb1_0.bus_number,
+        tb1_0.bus_type 
+    from
+        trip_bus tb1_0
+09:14:26.307 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1802]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569553676406100)): 1802
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569553676406100)#1802] : 1750527007
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [9]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [50]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN63 CX 4392]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Semi-Luxury]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569553676406100)#1802
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7af98139
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1803]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569553676406100)): 1803
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569553676406100)#1803] : 727720647
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [26]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [30]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN63 CX 7894]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Semi-Luxury]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569553676406100)#1803
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7af98139
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1804]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569553676406100)): 1804
+09:14:26.308 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569553676406100)#1804] : 739898113
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [54]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [60]
+09:14:26.308 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN01 CX 1234]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Volvo]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569553676406100)#1804
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7af98139
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1904]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569553676406100)): 1904
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569553676406100)#1904] : 1936774281
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [15]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [AVAILABLE]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [15]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN01 TS 1234]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Electric Bus]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569553676406100)#1904
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7af98139
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [2002]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569553676406100)): 2002
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569553676406100)#2002] : 1161192343
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [20]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [UNAVAILABLE]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [20]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN03 TS 1234]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Luxury]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569553676406100)#2002
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7af98139
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [1905]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (com.wipro.entity.TripBus(569553676406100)): 1905
+09:14:26.309 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [com.wipro.entity.TripBus(569553676406100)#1905] : 1877612524
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [90]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [2] - [AVAILABLE]
+09:14:26.309 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [3] - [90]
+09:14:26.310 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [4] - [TN02 TS 1234]
+09:14:26.310 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results - Extracted JDBC value [5] - [Electric Bus]
+09:14:26.310 [http-nio-8081-exec-2] DEBUG o.h.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : com.wipro.entity.TripBus(569553676406100)#1905
+09:14:26.310 [http-nio-8081-exec-2] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7af98139
+09:14:26.310 [http-nio-8081-exec-2] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction commit
+09:14:26.310 [http-nio-8081-exec-2] DEBUG o.s.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [SessionImpl(1211751693<open>)]
+09:14:26.310 [http-nio-8081-exec-2] DEBUG o.h.e.t.internal.TransactionImpl - committing
+09:14:26.311 [http-nio-8081-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Resetting read-only flag of JDBC Connection [HikariProxyConnection@1257284381 wrapping oracle.jdbc.driver.T4CConnection@5bd68074]
+09:14:26.311 [http-nio-8081-exec-2] DEBUG o.s.orm.jpa.JpaTransactionManager - Not closing pre-bound JPA EntityManager after transaction
+09:14:26.311 [http-nio-8081-exec-2] INFO  com.wipro.aspect.LoggingAspect - Method TripBusController.getAllBus() returned with value: [TripBus(busId=1802, busNumber=TN63 CX 4392, busType=Semi-Luxury, busCapacity=50, availableStatus=UNAVAILABLE, availableSeat=9), TripBus(busId=1803, busNumber=TN63 CX 7894, busType=Semi-Luxury, busCapacity=30, availableStatus=UNAVAILABLE, availableSeat=26), TripBus(busId=1804, busNumber=TN01 CX 1234, busType=Volvo, busCapacity=60, availableStatus=UNAVAILABLE, availableSeat=54), TripBus(busId=1904, busNumber=TN01 TS 1234, busType=Electric Bus, busCapacity=15, availableStatus=AVAILABLE, availableSeat=15), TripBus(busId=2002, busNumber=TN03 TS 1234, busType=Luxury, busCapacity=20, availableStatus=UNAVAILABLE, availableSeat=20), TripBus(busId=1905, busNumber=TN02 TS 1234, busType=Electric Bus, busCapacity=90, availableStatus=AVAILABLE, availableSeat=90)]
+09:14:26.311 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+09:14:26.311 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[TripBus(busId=1802, busNumber=TN63 CX 4392, busType=Semi-Luxury, busCapacity=50, availableStatus=UN (truncated)...]
+09:14:26.314 [http-nio-8081-exec-2] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+09:14:26.314 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+09:14:46.176 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:14:46.176 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:15:16.187 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:15:16.187 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:15:46.190 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:15:46.190 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:16:16.197 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:16:16.197 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:16:46.208 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:16:46.208 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:17:16.211 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:17:16.211 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:17:46.224 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:17:46.224 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:18:16.225 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:18:16.225 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:18:17.862 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@39433fbf: (connection has passed maxLifetime)
+09:18:17.902 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@6a41845f
+09:18:17.933 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:18:30.898 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@585184e2: (connection has passed maxLifetime)
+09:18:30.911 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@60eb38be
+09:18:30.944 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:18:37.856 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@5bd68074: (connection has passed maxLifetime)
+09:18:37.872 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@80fb713
+09:18:37.903 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:18:40.139 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@6a1007b4: (connection has passed maxLifetime)
+09:18:40.154 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@df3b82d
+09:18:40.184 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:18:45.905 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@a95b113: (connection has passed maxLifetime)
+09:18:45.919 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@37732477
+09:18:45.951 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:18:46.227 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:18:46.227 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:18:49.082 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@5d1388b3: (connection has passed maxLifetime)
+09:18:49.094 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@698cb8f1
+09:18:49.129 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:18:53.429 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@4481e9e0: (connection has passed maxLifetime)
+09:18:53.441 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@115ab12a
+09:18:53.474 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:19:00.196 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@2578da1b: (connection has passed maxLifetime)
+09:19:00.208 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@481ac948
+09:19:00.239 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:19:09.969 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@3e7cd49d: (connection has passed maxLifetime)
+09:19:09.982 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@230bac64
+09:19:10.013 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:19:16.227 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:19:16.228 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:19:38.245 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@22563e4d: (connection has passed maxLifetime)
+09:19:38.258 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@5e9d009
+09:19:38.290 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:19:46.228 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:19:46.228 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:20:16.229 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:20:16.229 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:20:46.238 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:20:46.238 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:21:16.239 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:21:16.239 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:21:46.241 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:21:46.242 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:22:16.243 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:22:16.243 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:22:46.258 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:22:46.258 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:23:16.268 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:23:16.268 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:23:46.277 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:23:46.277 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:24:16.290 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:24:16.290 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:24:46.298 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:24:46.298 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:25:16.305 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:25:16.305 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:25:46.314 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:25:46.314 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:26:16.324 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:26:16.324 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:26:46.325 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:26:46.326 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:27:16.330 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:27:16.330 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:27:46.345 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:27:46.345 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:28:16.348 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:28:16.348 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:28:46.363 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:28:46.363 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:29:16.372 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:29:16.373 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:29:46.381 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:29:46.381 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:30:16.383 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:30:16.383 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:30:46.384 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:30:46.385 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:31:16.395 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:31:16.395 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:31:46.403 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:31:46.403 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:32:16.409 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:32:16.410 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:32:46.423 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:32:46.423 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:33:16.429 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:33:16.429 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:33:46.433 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:33:46.433 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:34:16.435 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:34:16.435 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:34:46.441 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:34:46.441 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:35:16.449 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:35:16.449 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:35:46.456 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:35:46.456 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:36:16.468 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:36:16.468 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:36:46.478 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:36:46.478 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:37:16.479 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:37:16.479 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:37:46.486 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:37:46.486 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:38:16.497 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:38:16.497 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:38:46.505 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:38:46.505 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:39:16.506 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:39:16.506 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:39:46.519 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:39:46.519 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:40:16.525 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:40:16.525 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:40:46.540 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:40:46.540 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:41:16.543 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:41:16.543 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:41:46.551 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:41:46.551 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:42:16.562 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:42:16.562 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:42:46.569 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:42:46.569 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:43:16.571 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:43:16.571 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:43:46.584 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:43:46.584 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:44:16.589 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:44:16.589 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:44:46.598 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:44:46.598 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:45:16.607 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:45:16.607 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:45:46.614 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:45:46.614 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:46:16.628 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:46:16.628 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:46:46.637 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:46:46.637 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:47:16.647 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:47:16.648 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:47:46.654 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:47:46.654 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:48:01.326 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@6a41845f: (connection has passed maxLifetime)
+09:48:01.369 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@914e888
+09:48:01.404 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:09.754 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@37732477: (connection has passed maxLifetime)
+09:48:09.768 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@3e0c5d1
+09:48:09.801 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:11.119 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@60eb38be: (connection has passed maxLifetime)
+09:48:11.145 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@761eb2b6
+09:48:11.181 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:13.822 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@115ab12a: (connection has passed maxLifetime)
+09:48:13.832 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@efc0c0f
+09:48:13.868 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:16.655 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:48:16.655 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:48:19.068 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@df3b82d: (connection has passed maxLifetime)
+09:48:19.079 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@2e703014
+09:48:19.114 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:28.895 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@481ac948: (connection has passed maxLifetime)
+09:48:28.906 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@4db44b8f
+09:48:28.941 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:34.425 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@80fb713: (connection has passed maxLifetime)
+09:48:34.440 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@408140df
+09:48:34.471 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:46.657 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:48:46.657 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:48:49.049 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@698cb8f1: (connection has passed maxLifetime)
+09:48:49.061 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@243a34e3
+09:48:49.096 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:48:50.738 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@230bac64: (connection has passed maxLifetime)
+09:48:50.753 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@21400e1b
+09:48:50.786 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:49:16.667 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:49:16.667 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:49:17.274 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@5e9d009: (connection has passed maxLifetime)
+09:49:17.287 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@aabf5b0
+09:49:17.320 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+09:49:46.681 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:49:46.681 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:50:16.689 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:50:16.691 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:50:46.696 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:50:46.696 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:51:16.701 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:51:16.702 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:51:46.709 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:51:46.709 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:52:16.725 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:52:16.725 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:52:46.737 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:52:46.737 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:53:16.740 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:53:16.740 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:53:46.742 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:53:46.742 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:54:16.751 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:54:16.752 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:54:46.755 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:54:46.755 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:55:16.761 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:55:16.761 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:55:46.771 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:55:46.771 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:56:16.783 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:56:16.783 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:56:46.784 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:56:46.784 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:57:16.796 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:57:16.796 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:57:46.798 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:57:46.798 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:58:16.810 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:58:16.810 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:58:46.816 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:58:46.816 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:59:16.816 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:59:16.816 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+09:59:46.825 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+09:59:46.825 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:00:16.833 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:00:16.833 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:00:46.840 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:00:46.840 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:01:16.841 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:01:16.842 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:01:46.843 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:01:46.843 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:02:16.856 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:02:16.856 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:02:46.859 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:02:46.859 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:03:16.870 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:03:16.870 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:03:46.879 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:03:46.879 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:04:16.884 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:04:16.884 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:04:46.891 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:04:46.891 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:05:16.894 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:05:16.895 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:05:46.907 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:05:46.908 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:06:16.909 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:06:16.909 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:06:46.918 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:06:46.918 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:07:16.931 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:07:16.931 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:07:46.942 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:07:46.942 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:08:16.943 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:08:16.943 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:08:46.954 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:08:46.954 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:09:16.957 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:09:16.957 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:09:46.960 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:09:46.960 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:10:16.973 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:10:16.973 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:10:46.983 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:10:46.984 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:11:16.989 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:11:16.989 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:11:46.995 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:11:46.995 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:12:17.001 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:12:17.001 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:12:47.016 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:12:47.016 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:13:17.019 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:13:17.019 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:13:47.031 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:13:47.031 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:14:17.035 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:14:17.035 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:14:47.039 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:14:47.039 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:15:17.049 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:15:17.049 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:15:47.050 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:15:47.050 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:16:17.052 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:16:17.052 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:16:47.068 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:16:47.068 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:17:17.070 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:17:17.070 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:17:28.906 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@3e0c5d1: (connection has passed maxLifetime)
+10:17:28.921 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@707de3f2
+10:17:28.952 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:17:40.298 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@efc0c0f: (connection has passed maxLifetime)
+10:17:40.312 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@3d395e4
+10:17:40.345 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:17:47.078 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:17:47.078 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:17:51.739 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@4db44b8f: (connection has passed maxLifetime)
+10:17:51.754 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@4f1c47c9
+10:17:51.786 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:17:55.957 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@914e888: (connection has passed maxLifetime)
+10:17:55.974 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@12ea2a05
+10:17:56.020 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:04.833 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@761eb2b6: (connection has passed maxLifetime)
+10:18:04.846 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@7cc09458
+10:18:04.879 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:06.780 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@21400e1b: (connection has passed maxLifetime)
+10:18:06.795 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@74908990
+10:18:06.828 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:07.963 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@408140df: (connection has passed maxLifetime)
+10:18:07.974 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@c8de858
+10:18:08.010 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:13.720 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@2e703014: (connection has passed maxLifetime)
+10:18:13.734 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@1ef5d9b4
+10:18:13.766 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:17.088 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:18:17.088 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:18:36.546 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@243a34e3: (connection has passed maxLifetime)
+10:18:36.559 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@347f4a95
+10:18:36.594 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:40.541 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@aabf5b0: (connection has passed maxLifetime)
+10:18:40.551 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@a98d887
+10:18:40.587 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:18:47.095 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:18:47.095 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:19:17.109 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:19:17.110 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:19:47.118 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:19:47.118 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:20:17.129 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:20:17.129 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:20:47.134 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:20:47.134 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:21:17.139 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:21:17.139 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:21:47.149 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:21:47.149 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:22:17.153 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:22:17.153 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:22:47.165 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:22:47.165 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:23:17.175 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:23:17.176 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:23:47.184 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:23:47.184 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:24:17.197 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:24:17.197 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:24:47.201 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:24:47.201 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:25:17.201 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:25:17.201 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:25:47.205 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:25:47.205 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:26:17.215 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:26:17.215 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:26:47.228 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:26:47.228 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:27:17.240 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:27:17.240 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:27:47.253 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:27:47.253 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:28:17.262 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:28:17.262 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:28:47.277 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:28:47.277 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:29:17.279 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:29:17.279 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:29:47.295 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:29:47.295 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:30:17.296 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:30:17.296 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:30:47.307 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:30:47.307 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:31:17.321 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:31:17.321 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:31:47.325 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:31:47.325 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:32:17.331 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:32:17.332 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:32:47.336 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:32:47.336 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:33:17.342 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:33:17.342 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:33:47.350 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:33:47.350 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:34:17.359 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:34:17.359 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:34:47.373 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:34:47.373 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:35:17.378 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:35:17.378 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:35:47.381 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:35:47.381 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:36:17.385 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:36:17.385 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:36:47.386 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:36:47.386 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:37:17.400 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:37:17.400 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:37:47.409 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:37:47.409 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:38:17.413 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:38:17.413 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:38:47.415 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:38:47.415 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:39:17.422 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:39:17.422 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:39:47.436 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:39:47.436 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:40:17.438 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:40:17.438 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:40:47.453 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:40:47.453 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:41:17.458 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:41:17.458 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:41:47.474 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:41:47.474 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:42:17.477 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:42:17.478 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:42:47.489 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:42:47.489 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:43:17.491 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:43:17.491 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:43:47.499 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:43:47.500 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:44:17.502 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:44:17.502 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:44:47.509 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:44:47.510 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:45:17.516 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:45:17.516 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:45:47.517 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:45:47.517 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:46:17.523 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:46:17.523 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:46:47.534 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:46:47.534 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:47:17.499 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@707de3f2: (connection has passed maxLifetime)
+10:47:17.513 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@28a5c21e
+10:47:17.545 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:47:17.545 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:17.545 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:47:20.096 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@12ea2a05: (connection has passed maxLifetime)
+10:47:20.107 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@58bb4661
+10:47:20.142 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:26.849 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@3d395e4: (connection has passed maxLifetime)
+10:47:26.861 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@7eee7b0d
+10:47:26.896 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:27.958 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@4f1c47c9: (connection has passed maxLifetime)
+10:47:27.970 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@39ddfef
+10:47:28.005 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:34.250 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@1ef5d9b4: (connection has passed maxLifetime)
+10:47:34.263 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@4a4b55ee
+10:47:34.297 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:36.426 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@74908990: (connection has passed maxLifetime)
+10:47:36.438 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@2ac3016f
+10:47:36.474 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:42.327 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@7cc09458: (connection has passed maxLifetime)
+10:47:42.339 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@4e94a80
+10:47:42.372 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:47.559 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:47:47.559 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:47:56.947 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@a98d887: (connection has passed maxLifetime)
+10:47:56.960 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@28c9505f
+10:47:56.994 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:47:57.650 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@c8de858: (connection has passed maxLifetime)
+10:47:57.660 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@585730c6
+10:47:57.697 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:48:17.563 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:48:17.563 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:48:23.589 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@347f4a95: (connection has passed maxLifetime)
+10:48:23.601 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@1d34002c
+10:48:23.634 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+10:48:47.579 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:48:47.579 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:49:17.581 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:49:17.581 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:49:47.584 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:49:47.584 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:50:17.598 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:50:17.605 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:50:47.614 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:50:47.614 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:51:17.616 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:51:17.616 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:51:47.628 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:51:47.628 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:52:17.631 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:52:17.631 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:52:47.634 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:52:47.634 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:53:17.636 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:53:17.636 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:53:47.651 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:53:47.651 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:54:17.659 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:54:17.659 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:54:47.674 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:54:47.674 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:55:17.687 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:55:17.687 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:55:47.698 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:55:47.698 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:56:17.700 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:56:17.700 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:56:47.712 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:56:47.712 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:57:17.714 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:57:17.714 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:57:47.730 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:57:47.730 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:58:17.736 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:58:17.737 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:58:47.746 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:58:47.746 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:59:17.761 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:59:17.761 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+10:59:47.769 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:59:47.769 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:00:17.782 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:00:17.782 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:00:47.783 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:00:47.783 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:01:17.788 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:01:17.788 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:01:47.793 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:01:47.793 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:02:17.797 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:02:17.798 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:02:47.798 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:02:47.798 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:03:17.804 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:03:17.805 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:03:47.815 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:03:47.815 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:04:17.820 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:04:17.820 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:04:47.824 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:04:47.824 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:05:17.828 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:05:17.828 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:05:47.838 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:05:47.838 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:06:17.850 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:06:17.850 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:06:47.852 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:06:47.852 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:07:17.864 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:07:17.864 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:07:47.878 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:07:47.878 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:08:17.890 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:08:17.891 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:08:47.896 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:08:47.896 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:09:17.901 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:09:17.909 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:09:47.910 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:09:47.910 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:10:17.921 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:10:17.921 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:10:47.926 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:10:47.926 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:11:17.932 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:11:17.932 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:11:47.944 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:11:47.944 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:12:17.950 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:12:17.950 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:12:47.966 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:12:47.966 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:13:17.968 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:13:17.968 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:13:47.983 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:13:47.983 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:14:17.998 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:14:17.998 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:14:48.011 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:14:48.011 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:15:18.024 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:15:18.024 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:15:48.037 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:15:48.037 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:16:18.051 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:16:18.051 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:16:48.053 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:16:48.053 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:17:04.447 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@39ddfef: (connection has passed maxLifetime)
+11:17:04.469 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@87dd49c
+11:17:04.506 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:07.886 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@4a4b55ee: (connection has passed maxLifetime)
+11:17:07.897 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@7843b031
+11:17:07.933 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:11.280 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@28a5c21e: (connection has passed maxLifetime)
+11:17:11.293 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@296f21e8
+11:17:11.326 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:15.405 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@58bb4661: (connection has passed maxLifetime)
+11:17:15.416 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@303aa4d7
+11:17:15.451 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:15.730 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@585730c6: (connection has passed maxLifetime)
+11:17:15.741 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@2d21fc26
+11:17:15.777 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:18.062 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:17:18.062 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:17:18.732 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@7eee7b0d: (connection has passed maxLifetime)
+11:17:18.746 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@7759e9cc
+11:17:18.778 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:21.915 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@2ac3016f: (connection has passed maxLifetime)
+11:17:21.927 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@2748606f
+11:17:21.962 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:30.376 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@28c9505f: (connection has passed maxLifetime)
+11:17:30.389 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@1c104a75
+11:17:30.422 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:33.037 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@4e94a80: (connection has passed maxLifetime)
+11:17:33.049 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@72e770fa
+11:17:33.085 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:17:48.065 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:17:48.065 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:18:10.391 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@1d34002c: (connection has passed maxLifetime)
+11:18:10.405 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@79935c6c
+11:18:10.438 [HikariPool-3 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Connection not added, stats (total=10, active=0, idle=10, waiting=0)
+11:18:18.074 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:18:18.074 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:18:48.082 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:18:48.082 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:19:18.094 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:19:18.094 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:19:48.105 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:19:48.105 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:20:18.114 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:20:18.114 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:20:48.117 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:20:48.117 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:21:18.133 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:21:18.133 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:21:48.142 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:21:48.142 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:22:18.151 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:22:18.151 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:22:48.159 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:22:48.159 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:23:18.166 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:23:18.166 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:23:48.170 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:23:48.170 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:24:18.184 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:24:18.184 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:24:48.200 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:24:48.200 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:25:18.214 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:25:18.214 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:25:48.230 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:25:48.230 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:26:18.237 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:26:18.237 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:26:48.242 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:26:48.242 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:27:18.246 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:27:18.246 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:27:48.260 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:27:48.260 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:28:18.267 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:28:18.268 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:28:48.276 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:28:48.276 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:29:18.277 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:29:18.277 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:29:48.278 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:29:48.278 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:30:18.280 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:30:18.281 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:30:48.283 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:30:48.283 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:31:18.294 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:31:18.294 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:31:48.297 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:31:48.297 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:32:18.306 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:32:18.306 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:32:48.315 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:32:48.315 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:33:18.319 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:33:18.319 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:33:48.324 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:33:48.324 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:34:18.338 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:34:18.338 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:34:48.350 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:34:48.350 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:35:18.361 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:35:18.361 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:35:48.365 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:35:48.365 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:36:18.368 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:36:18.368 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:36:48.370 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:36:48.371 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:37:18.375 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:37:18.375 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:37:48.388 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:37:48.388 [HikariPool-3 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Fill pool skipped, pool has sufficient level or currently being filled.
+11:37:58.596 [RMI TCP Connection(266)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+11:37:58.596 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+11:37:58.600 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b253d60, started on Sat Sep 21 07:20:13 IST 2024
+11:37:58.603 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+11:37:58.603 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Bean 'applicationTaskExecutor' completed its stop procedure
+11:37:58.603 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147482623
+11:37:58.603 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+11:37:58.603 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147481599
+11:37:58.604 [RMI TCP Connection(266)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"]
+11:37:58.613 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+11:37:58.613 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase -2147483647
+11:37:58.614 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.c.s.DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
+11:37:58.617 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+11:37:58.617 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+11:37:58.617 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:37:58.618 [RMI TCP Connection(266)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:37:58.618 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.h.internal.SessionFactoryImpl - HHH000031: Closing
+11:37:58.619 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.h.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@616fce62] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@4e274144]
+11:37:58.620 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+11:37:58.620 [RMI TCP Connection(266)-127.0.0.1] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+11:37:58.621 [RMI TCP Connection(266)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+11:37:58.621 [RMI TCP Connection(266)-127.0.0.1] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+11:37:58.621 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@87dd49c: (connection evicted)
+11:37:58.621 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@7843b031: (connection evicted)
+11:37:58.622 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@296f21e8: (connection evicted)
+11:37:58.622 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@303aa4d7: (connection evicted)
+11:37:58.622 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@2d21fc26: (connection evicted)
+11:37:58.622 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@7759e9cc: (connection evicted)
+11:37:58.623 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@2748606f: (connection evicted)
+11:37:58.624 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@1c104a75: (connection evicted)
+11:37:58.625 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@72e770fa: (connection evicted)
+11:37:58.626 [HikariPool-3 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Closing connection oracle.jdbc.driver.T4CConnection@79935c6c: (connection evicted)
+11:37:58.626 [RMI TCP Connection(266)-127.0.0.1] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+11:37:58.626 [RMI TCP Connection(266)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\manov\eclipse-workspace\sample-springboot-project\src\main\java\com\wipro\SampleSpringbootProjectApplication.java"/>
+			<item value="C:\Users\manov\eclipse-workspace\java_lab_exercise\src\com\wipro\Lab6\Lab6.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.wipro"/>
+		</list>
+		<list key="groupId">
+			<item value="com.wipro"/>
+		</list>
+		<list key="artifactId">
+			<item value="sample_spring_project1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\manov\eclipse-workspace\24NAG2088_06_manojkumar_m_final_milestone"/>
+			<item value="C:\Users\manov\OneDrive\Desktop\event-management\24nag2088_06_manojkumar_m_springboot_milestone_4"/>
+			<item value="C:\Users\manov\eclipse-workspace\users-management-system-master\springboot + angular\backend"/>
+			<item value="C:\Users\manov\eclipse-workspace\trip-management-system-capstone"/>
+			<item value="C:\Users\manov\OneDrive\Desktop\Spring_Security-Angular_Authentication-CoderDot-main\spring-security"/>
+			<item value="C:\Users\manov\OneDrive\Desktop\24NAG2088_06__manojkumar_m_milestone_4\24nag2088_06_manojkumar_m_springboot_milestone_4"/>
+			<item value="C:\Users\manov\eclipse-workspace\Spring-Security-6-JWT-main"/>
+			<item value="C:\Users\manov\eclipse-workspace\milestone-4-24NAG2088_06"/>
+			<item value="C:\Users\manov\eclipse-workspace\trip-management-app"/>
+			<item value="C:\Users\manov\eclipse-workspace\24NAG2088_08_Pavithra_J\spring-data-jpa-blog-engine"/>
+			<item value="C:\Users\manov\eclipse-workspace\24NAG2088_08_Pavithra_J"/>
+			<item value="C:\Users\manov\eclipse-workspace\springboot-jpa-rest-blog-app1"/>
+			<item value="C:\Users\manov\eclipse-workspace\24NAG2088_06_manojkumar_m\springboot-jpa-rest-blog-app"/>
+			<item value="C:\Users\manov\eclipse-workspace\blogpost-main"/>
+			<item value="C:\Users\manov\eclipse-workspace\springboot-blog-jpa-rest"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

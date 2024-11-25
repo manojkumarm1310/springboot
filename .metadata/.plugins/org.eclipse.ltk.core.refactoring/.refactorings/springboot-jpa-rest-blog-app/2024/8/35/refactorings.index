@@ -1,0 +1,23 @@
+1724850418561	Delete element
+1724850712088	Delete element
+1724859505350	Delete element
+1724860892469	Delete element
+1724860895907	Delete element
+1724873433047	Delete element
+1724874542059	Rename type 'BlogCommentDAO'
+1724874926861	Rename type 'BlogCommentRepository'
+1724878195929	Delete element
+1724878202116	Delete element
+1724878206577	Delete element
+1724878214074	Delete element
+1724878593114	Rename type 'PostEntity'
+1724878632261	Rename type 'CommentEntity'
+1724879158013	Rename type 'CommentRepository'
+1724879169033	Rename type 'PostRepository'
+1724879192616	Rename type 'CommentService'
+1724879214763	Rename type 'PostService'
+1724879262930	Rename type 'CommentController'
+1724879272225	Rename type 'PostController'
+1724880251749	Rename package 'com.wipro.entity'
+1724880512438	Rename type 'BlogCommentEntity'
+1724880522285	Rename type 'BlogPostEntity'
